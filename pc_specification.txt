@@ -1,8 +1,8 @@
 {
-  "Model Name": "X555LAB",
-  "Brand Name": "ASUSTeK COMPUTER INC.",
-  "OS Install Date": "29 Jun, 2020",
-  "OS Age": " 1 year 7 month 13 day",
-  "Manufacture Date": "19 Dec, 2014",
-  "Device Age": " 7 year 1 month 22 day"
+  "Manufacture Date": "19 Nov, 2020",
+  "Device Age": " 1 year 2 month 21 day",
+  "Brand Name": "Acer",
+  "Model Number": "Nitro AN515-55",
+  "Model Family": "Nitro 5",
+  "RAM Size": "16 GB"
 }
