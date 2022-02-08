@@ -32,13 +32,13 @@ def process_data(cmd_data):
     return data
 
 
-def date_format(val, index=0, str_val=''):
+def date_format(val, index=0, str_val=[]):
     # Convert dat time object to string
     if index < 3:
         divisor, name = date_index[index]
         quotient = val//divisor
         if quotient:
-            str_val += f" {quotient} {name}"
+            str_val.append(f"{quotient} {name}")
         str_val = date_format(val % divisor, index+1, str_val)
     return str_val
 
@@ -46,7 +46,8 @@ def date_format(val, index=0, str_val=''):
 def age_calculate(date_time_obj):
     # Calculate the age
     age = datetime.now()-date_time_obj
-    return date_format(age.days)
+    str_val = date_format(age.days)
+    return ' '.join(str_val)
 
 
 def format_data(data, keys):
