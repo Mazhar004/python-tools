@@ -97,4 +97,4 @@ if __name__ == "__main__":
     cmd_data, keys = get_command_data()
     data = process_data(cmd_data)
     json_data = format_data(data, keys)
-    show(json_data, save=True)
+    show(json_data)
