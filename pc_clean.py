@@ -47,16 +47,31 @@ def tree():
     os.chdir(current_path)
 
 
-def full_pc_clean():
+def linux_clean():
+    commands = ["du -sh /var/cache/apt",
+                "rm -rf ~/.cache/thumbnails/*",
+                "sudo apt-get autoremove",
+                "sudo apt-get clean",
+                ]
+    for cmd in commands:
+        os.system(cmd)
+
+
+def pc_clean():
     """Call the full pipeline"""
-    junk_clean()
-    tree()
+    platform = (sys.platform).lower()
+    if 'win' in platform:
+        if is_admin():
+            junk_clean()
+            tree()
+        else:
+            # Re-run the program with admin rights
+            ctypes.windll.shell32.ShellExecuteW(
+                None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+
+    elif platform == 'linux':
+        linux_clean()
 
 
 if __name__ == "__main__":
-    if is_admin():
-        full_pc_clean()
-    else:
-        # Re-run the program with admin rights
-        ctypes.windll.shell32.ShellExecuteW(
-            None, "runas", sys.executable, " ".join(sys.argv), None, 1)
+    pc_clean()
