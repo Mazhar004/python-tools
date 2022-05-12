@@ -48,10 +48,13 @@ def tree():
 
 
 def linux_clean():
+    uname = getpass.getuser()
+    os.chdir(f'/home/{uname}')
+    
     commands = ["du -sh /var/cache/apt",
                 "rm -rf ~/.cache/thumbnails/*",
-                "sudo apt-get autoremove",
-                "sudo apt-get clean",
+                "sudo apt autoremove",
+                "sudo apt clean",
                 ]
     for cmd in commands:
         os.system(cmd)
@@ -74,6 +77,7 @@ def pc_clean():
                                                 1)
 
     elif platform == 'linux':
+        print("hello")
         linux_clean()
 
 
