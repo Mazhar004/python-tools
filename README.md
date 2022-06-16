@@ -1,6 +1,5 @@
 # Python Tools
-## Random tools building using python
-### Device specififcation:
+### Device Specififcation
 - Windows
     - `python3 specs_device.py`
     - Output
@@ -39,7 +38,20 @@
 - Linux
     - `sudo python3 pc_clean.py`
     - It will execute following command & clean
-        - `cache/apt`
-        - `cache/thumbnails`
         - `autoremove`
         - `clean`
+        - `cache/apt`
+        - `cache/thumbnails`
+### English Dictionary [ Link ](English%20Dictionary)
+```python
+from dictionary import Dictionary
+dictionary_data = Dictionary()
+dictionary_data.suggest_status = True
+print(dictionary_data['cosmos'])
+>>> Everything that exists anywhere.
+
+print(dictionary_data['helo'])
+>>> We didn not find helo.
+>>> Please have a look similar word matching with your input key
+['Help', 'Hel', 'Helot', 'Hero', 'He lo', 'He-lo', 'Hel o', 'Hole', 'Hello', 'Halo', 'Hell', 'Held']
+```
