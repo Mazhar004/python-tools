@@ -14,7 +14,7 @@ def convert_date(val, d_format="%m/%d/%Y", r_format="%d %b, %Y"):
     # Convert date string to datetime object or vice versa
     try:
         date_time_obj = datetime.strptime(val, d_format)
-    except:
+    except ValueError:
         val = re.search(r'[\d]{1,}/[\d]{1,}/[\d]{4}', val).group()
         date_time_obj = datetime.strptime(val, d_format)
     date_time_str = date_time_obj.strftime(r_format)

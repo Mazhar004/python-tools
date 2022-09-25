@@ -19,11 +19,12 @@ def remove(path):
     for file in files:
         try:
             shutil.rmtree(file)
-        except:
+        except Exception:
             try:
                 os.remove(file)
-            except:
-                pass
+            except Exception as Err:
+                print(f"Operation not completed {Err}")
+                continue
 
 
 def junk_clean():
