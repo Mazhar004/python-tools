@@ -46,7 +46,7 @@ def date_format(val, index=0, str_val=[]):
 def age_calculate(date_time_obj):
     # Calculate the age
     age = datetime.now()-date_time_obj
-    str_val = date_format(age.days)
+    str_val = date_format(age.days,index=0,str_val=[])
     return ' '.join(str_val)
 
 
