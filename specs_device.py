@@ -72,7 +72,7 @@ def get_command_data():
         keys = {'system model': ['Model Name'],
                 'system manufacturer': ['Brand Name'],
                 'original install date': ['OS Install Date', 'OS Age'],
-                'bios version': ['Manufacture Date', 'Device Age']}
+                'bios version': ['BIOS Date', 'BIOS Age']}
 
     elif platform == 'linux':
         command = "dmidecode"
