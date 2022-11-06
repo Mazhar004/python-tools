@@ -5,8 +5,8 @@
     - Output
         ```
         {
-            "Manufacture Date": "19 Nov, 2020",
-            "Device Age": "1 year 2 month 21 day",
+            "BIOS Date": "19 Nov, 2020",
+            "BIOS Age": "1 year 2 month 21 day",
             "OS Install Date": "16th Aug, 2021",
             "OS Age": "5 month 23 day",
             "Brand Name": "Acer",
@@ -18,8 +18,8 @@
     - Output
         ```
         {
-            "Manufacture Date": "19 Nov, 2020",
-            "Device Age": "1 year 2 month 21 day",
+            "BIOS Date": "19 Nov, 2020",
+            "BIOS Age": "1 year 2 month 21 day",
             "Brand Name": "Acer",
             "Model Number": "Nitro AN515-55",
             "Model Family": "Nitro 5",
